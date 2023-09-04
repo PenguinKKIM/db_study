@@ -38,7 +38,7 @@
   SELECT *  FROM student WHERE grade IN(2,3); -- 위와 아래의 실행결과는 같다.
   ```
 
-  
+  > *이 밑부터는 대문자로 통일*
 
 - **연산자가 있으나, 자바에서 쓰던거랑 조금 다르다.**
 
@@ -63,7 +63,7 @@
   SELECT * FROM emp WHERE enum = 100 AND job ='CLERK' OR job='salesman' -- 작은 따옴표 안에 들어가있는 문자
   ```
 
-  - *ALIAS 썼을때 스페이스를 써야하면 큰따옴표를 쓴다.*
+  - *ALIAS 썼을때 **스페이스를 써야하면 큰따옴표**를 쓴다.*
 
   ``` sql
   SELECT empno "사번", ename " 이 름", job "직 무" FROM emp;
