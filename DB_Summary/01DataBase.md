@@ -23,7 +23,7 @@
 
 #### Sever & Client
 
-![](DB_Summary/client-server.png)
+![](DB_Summary/client-server.png](https://github.com/PenguinKKIM/db_study/blob/main/DB_Summary/client-server.png))
 
 
 
