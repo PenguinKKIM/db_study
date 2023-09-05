@@ -217,3 +217,42 @@ SELECT CURTIME();
 SELECT NOW();
 ```
 
+
+
+##### ORDER BY
+
+- 열을 정렬해주는 명령어이다
+
+- SELECT 절 제일 마지막에 온다
+
+  ```sql
+  ### student 테이블에 ,exam_01 테이블을 studno 가 같은 조건으로 조인하고, 3번째 열을 내림차순(DESC)해준다.
+  SELECT s.studno, s.name, e1.total
+  FROM student s JOIN exam_01 e1 ON s.studno = e1.studno
+  ORDER BY 3 DESC;
+  ```
+
+- 열의 이름으로도 쓸수있다
+
+  ```sql
+  ### student 테이블에 ,exam_01 테이블을 studno 가 같은 조건으로 조인하고, name 열을 오름차순(ASC) 해준다.
+  SELECT s.studno, s.name, e1.total
+  FROM student s JOIN exam_01 e1 ON s.studno = e1.studno
+  ORDER BY name ASC;
+  ```
+
+  
+
+##### GROUP BY
+
+- 테이블의 데이터를 그룹화 하기 위해 쓴다.
+
+  ```sql
+  ##emp 테이블에 deptno, job 을 그룹으로 묶고, 사번과 직업, 묶인 그룹 의 수, 월급을 모두 더 해서 출력한다
+  
+  SELECT deptno, job, COUNT(*), SUM(sal) 
+  FROM emp 
+  GROUP BY deptno, job;
+  ```
+
+  

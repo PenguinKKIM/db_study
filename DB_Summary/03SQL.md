@@ -68,3 +68,15 @@
   ``` sql
   SELECT empno "사번", ename " 이 름", job "직 무" FROM emp;
   ```
+
+- 메소드를 생성하는 거처럼 이름을 붙여 쓸 수가 있다.
+
+  ```sql
+  ## professor 테이블에 p 라는 이름을 붙여, 컬럼들을 메소드처럼 사용하였다.
+  SELECT p.email, INSTR(p.email, '@') FROM professor p;
+  
+  ##JOIN 문에서 많이쓰는 이유는 두개 이상 테이블이 합쳐지면서 헷갈리지 않기위해 쓴다.
+  SELECT e.EMPNO,e.EMPNO, d.DNAME FROM emp e JOIN dept d ON e.DEPTNO = d.DEPTNO WHERE e.DEPTNO =10;
+  ```
+
+  
