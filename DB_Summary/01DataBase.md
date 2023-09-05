@@ -23,7 +23,7 @@
 
 #### Sever & Client
 
-![](C:\khj\workpiece\db_study\client-server.png)
+![](DB_Summary/client-server.png)
 
 
 
