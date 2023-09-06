@@ -81,7 +81,7 @@
   LEFT OUTER JOIN professor p ON s.profno = p.profno;
   ```
   
-  - 두 테이블이 일치 하지 않는 값을 가지고 있더라고 **null** 로 변환해 출력해준다.
+  - 두 테이블이 일치 하지 않는 값을 가지고 있더라도 **null** 로 변환해 출력해준다.
 
 ##### 자체조인
 
