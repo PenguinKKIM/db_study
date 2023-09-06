@@ -49,6 +49,8 @@ SELECT * FROM professor WHERE hpage IS NULL; -- 컬럼 값을 비교할때 null�
 
 ##### BETWEEN ( A ) AND (B) : A와 B의 사잇값을 구해준다
 
+- 작은수를 A에 넣어야한다
+
 ```sql
 ## student 테이블에서 birthday 이'1976-01-01'와 '1976-12-31' 의 사람을 출력해준다.
 SELECT * FROM student WHERE birthday BETWEEN '1976-01-01' AND '1976-12-31';
