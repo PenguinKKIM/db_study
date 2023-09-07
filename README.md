@@ -18,7 +18,7 @@
 
 ## 5. [JOIN](DB_Summary/05JOIN.md) 
 
-## 6. [Sub Quary]() 
+## 6. [Sub Quary](DB_Summary/06SUB_QUERY.md) 
 
 
 
