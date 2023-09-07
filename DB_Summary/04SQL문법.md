@@ -69,6 +69,16 @@ SELECT * FROM emp ORDER BY sal DESC; -- 오름차순
 SELECT * FROM student ORDER BY grade ASC, height DESC; -- 동시에 두개를 같이쓸수있다
 ```
 
+##### GROUP BY :  그룹으로 묶어준다.
+
+```sql
+#emp 테이블에 
+
+SELECT e.NAME, e.POSITION, e.pay
+FROM emp2 e
+WHERE e.PAY IN (SELECT MAX(pay) FROM emp2 GROUP BY POSITION) 
+```
+
 
 
 ##### DISTINCT : 중복되는 것을 빼준다.

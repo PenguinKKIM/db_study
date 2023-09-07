@@ -7,7 +7,7 @@ SELECT * FROM emp;
 SELECT empno, ename FROM emp; 
 
 SELECT * FROM dept; -- dept 테이블 전체보기
-SELECT deptno, dname FROM dept;-- dept 테이블에서 deptno, dname 보기
+SELECT deptno, dname FROM dept; -- dept 테이블에서 deptno, dname 보기
 
 SELECT studno, NAME, id, birthday, tel  FROM student ; -- 대소문자를 구별하지않는다.
 
@@ -15,7 +15,7 @@ SELECT studno, NAME, id, birthday, tel  FROM student ; -- 대소문자를 구별
 -- WHERE  행에대한 조건문(조건에 만족하는 행만 조회)
 SELECT * 
 FROM emp 
-WHERE deptno=10; -- 줄별로쓰기도한다
+WHERE deptno = 10; -- 줄별로쓰기도한다
 
 SELECT empno, ename, deptno  FROM emp WHERE deptno=10;
 
@@ -62,7 +62,7 @@ SELECT * FROM professor WHERE deptno = 101 AND POSITION = '정교수';
 
 SELECT * FROM student WHERE deptno1 = 101 OR deptno2 = 101;
 
-SELECT * FROM student WHERE (deptno1 = 101 OR deptno2 = 101) AND (grade = 1 OR grade = 2);
+SELECT * FROM student WHERE(deptno1 = 101 OR deptno2 = 101) AND (grade = 1 OR grade = 2);
 
 SELECT * FROM emp2 WHERE EMP_TYPE = '정규직' AND pay => 500;
 
@@ -76,21 +76,21 @@ SELECT gno, point FROM gogak WHERE POINT >= 600001;
 
 
 ## between  A AND B
-SELECT studno name FROM exam_01 WHERE total between  80 AND 89;
-SELECT * FROM student WHERE birthday between '1976-01-01' AND  '1976-12-31'
+SELECT studno name FROM exam_01 WHERE total BETWEEN 80 AND 89;
+SELECT * FROM student WHERE birthday BETWEEN '1976-01-01' AND  '1976-12-31'
 
 ## ORDER BY  정렬해주는것 , desc : 오름차순, asc : 내림차순
 SELECT * FROM emp ORDER BY sal ASC; -- 내림차순
-SELECT * FROM emp ORDER BY sal DESC; --오름차순
+SELECT * FROM emp ORDER BY sal DESC; -- 오름차순
 
 SELECT * FROM student WHERE grade = 4 ORDER BY NAME;
 SELECT NAME, studno, birthday, deptno1 FROM student WHERE grade = 4 ORDER BY 3;
 
 SELECT * FROM emp ORDER BY deptno, sal desc; -- 앞에것이 같을때 뒤에것을 기준으로한다.
-SELECT * FROM student ORDER BY grade ASC, height DESC; --중복으로사용도 가능하다
+SELECT * FROM student ORDER BY grade ASC, height DESC; -- 중복으로사용도 가능하다
 
 ## 중복행 제거 - DISTINCT
-SELECT DISTINCT (deptno1) FROM student;
+SELECT DISTINCT(grade) FROM student;
 
 ## LIKE - 컬럼에 문자열이 포함된것을 거를때
 -- 이름의 성이 '서'인 학생조회
@@ -106,6 +106,6 @@ SELECT studno, NAME, grade, jumin FROM student WHERE jumin LIKE '__09%';
 
 ## IFNULL -- null 인 값을 계산해야할 경우,IFNULL로 따로처리해줘야한다.IFNULL(널인지 비교할 값, 널 일시 대처할 값)
 SELECT profno, NAME, pay + bonus FROM professor WHERE bonus IS NOT NULL; -- 두값을 더할수도있다
-SELECT profno, NAME, pay + IFNULL (bonus,0) FROM professor;
+SELECT profno, NAME, pay + IFNULL(bonus,0) FROM professor;
 
 SELECT empno, ename, sal, comm FROM emp WHERE sal > 1000 AND (comm IS NULL OR comm < 1000);

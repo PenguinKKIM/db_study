@@ -105,6 +105,11 @@ values (4006,'전민','napeople','전임강사',220,STR_TO_DATE('20100628','%Y%m
 insert into professor
 values (4007,'허은','silver-her','조교수',290,STR_TO_DATE('20010523','%Y%m%d'),30,301,'silver-her@daum.net',null);
 
+
+ALTER TABLE student ADD CONSTRAINT FK_PROFND FOREIGN KEY (PROFND) REFERENCES
+
+
+
 commit;
 drop table IF EXISTS department;
 create table department
